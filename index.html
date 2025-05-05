@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maa’s Little Helper</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Maa’s Little Helper</h1>
+    <p class="tagline">Because even superheroes deserve a sidekick 💖</p>
+  </header>
+
+  <section class="intro-message">
+    <p>Hey Ma,</p>
+    <p>I know I’m not around as much as I’d like to be (thanks, hostel life🙃), so I built you this little helper. Just a tiny way to make your days smoother, lighter, and maybe even a little fun.</p>
+    <p>Love you always. ❤️ </p>
+    <p style="text-align:right;">— Your Favorite Child (and only childd!!)😌</p>
+  </section>
+
+  <main>
+    <section id="todo">
+      <h2>To-Do List</h2>
+      <input type="text" id="todo-input" placeholder="Add a task"/>
+      <button onclick="addTodo()">Add</button>
+      <ul id="todo-list"></ul>
+    </section>
+
+    <section id="grocery">
+      <h2>Grocery List</h2>
+      <input type="text" id="grocery-input" placeholder="Add grocery item"/>
+      <button onclick="addGrocery()">Add</button>
+      <ul id="grocery-list"></ul>
+    </section>
+
+    <section id="planner">
+      <h2>Daily Planner</h2>
+      <textarea placeholder="Write your plan for today..." id="planner-text"></textarea>
+      <button onclick="savePlanner()">Save</button>
+    </section>
+
+    <section id="medicine">
+      <h2>Medicine Reminder</h2>
+      <input type="text" id="medicine-name" placeholder="Medicine Name"/>
+      <input type="time" id="medicine-time"/>
+      <button onclick="addMedicine()">Add</button>
+      <ul id="medicine-list"></ul>
+    </section>
+
+    <section id="notes">
+      <h2>Notes to Self</h2>
+      <textarea id="notes-text" placeholder="Write something..."></textarea>
+      <button onclick="saveNote()">Save</button>
+    </section>
+
+    <section id="daily-message">
+      <h2>Daily Message From Me</h2>
+      <p id="message-text"></p>
+      <button onclick="showMessage()">💌 Reveal Message</button>
+    </section>
+
+    <section id="bills">
+      <h2>Bill Reminders</h2>
+      <input type="text" id="bill-name" placeholder="Bill Name"/>
+      <input type="date" id="bill-date"/>
+      <button onclick="addBill()">Add</button>
+      <ul id="bill-list"></ul>
+    </section>
+
+    <section id="calls">
+      <h2>Call Schedule</h2>
+      <input type="text" id="call-day" placeholder="e.g. Sunday Evening"/>
+      <button onclick="addCall()">Add</button>
+      <ul id="call-list"></ul>
+    </section>
+
+    <section id="quote">
+        <h3>Motivational Quote</h3>
+        <p id="quote-text">"Believe in yourself. You're stronger than you think."</p>
+        <button onclick="generateQuote()">New Quote</button>
+      </section>
+      
+      <progress id="progress-bar" value="0" max="100"></progress>
+      <p id="progress-text"></p>
+      
+      <select id="task-priority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      
+      <select id="task-category">
+        <option value="work">Work</option>
+        <option value="personal">Personal</option>
+        <option value="errands">Errands</option>
+      </select>
+
+      <input type="checkbox" onclick="markCompleted(event)" /> Completed
+
+    <label for="task-time">Set Time</label>
+<input type="time" id="task-time">
+
+  </main>
+
+  <footer>
+    <p>Made with ❤️ </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
